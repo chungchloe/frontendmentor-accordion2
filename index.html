@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!--Stylesheet-->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!--jQuery: Google CDN-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+</head>
+<body>
+  <!--Wrapper-->
+  <div id="wrapper">
+
+    <!--Container-->
+    <div class="container">
+
+      <!--Floating Box-->
+      <div class="box-wrap">
+        <img src="images/illustration-box-desktop.svg" alt="">
+      </div>
+
+      <!--Images-->
+      <div class="image-wrapper">
+        <img class="desktop-img" src="images/illustration-woman-online-desktop.svg" alt="">
+        <img class="mobile-img" src="images/illustration-woman-online-mobile.svg" alt="">
+      </div>
+
+      <!--Accordion-->
+      <div class="accordion" class="flex">
+
+        <!--Headin-->
+        <h1>FAQ</h1>
+
+        <div class="qna">
+          <h2 class="question first"><a aria-label="How many team members can I invite?">How many team members can I invite?</a></h2>
+          <img class="arrow first-arrow" src="images/icon-arrow-down.svg" alt="">
+          <p class="answer first-answer">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+        </div>
+
+        <span class="separator"></span>
+        
+        <div class="qna">
+          <h2 class="question second"><a aria-label="What is the maximum file upload size?">What is the maximum file upload size?</a></h2>
+          <img class="arrow second-arrow" src="images/icon-arrow-down.svg" alt="">
+          <p class="answer second-answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        </div>
+
+        <span class="separator"></span>
+
+        <div class="qna">
+          <h2 class="question third"><a aria-label="How do I reset my password?">How do I reset my password?</a></h2>
+          <img class="arrow third-arrow" src="images/icon-arrow-down.svg" alt="">
+          <p class="answer third-answer">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+        </div>
+
+        <span class="separator"></span>
+
+        <div class="qna">
+          <h2 class="question fourth"><a aria-label="Can I cancel my subscription?">Can I cancel my subscription?</a></h2>
+          <img class="arrow fourth-arrow" src="images/icon-arrow-down.svg" alt="">
+          <p class="answer fourth-answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+        </div>
+
+        <span class="separator"></span>
+
+        <div class="qna">
+          <h2 class="question fifth"><a aria-label="Do you provide additional support?">Do you provide additional support?</a></h2>
+          <img class="arrow fifth-arrow" src="images/icon-arrow-down.svg" alt="">
+          <p class="answer fifth-answer">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+        </div>
+
+        <span class="separator"></span>
+
+    </div><!--Accordion END-->
+    
+    </div><!--Container END--->
+
+  </div> <!--WRAPPER END-->
+
+  <!--jQuery-->
+  <script>
+    //Hide answer as a default state
+    $('.answer').hide();
+
+    //Show the second answer as default
+    $('.second-answer').show();
+    $(".second").css("font-weight", "bold");
+    $(".second-arrow").css("transform", "rotate(180deg)");
+
+    //Toggle answer when clicking on the question
+    $(".first").click(function(){
+      $(".first-answer").slideDown(1000);
+      $(".answer").not(".first-answer").slideUp(1000);
+      $(".first").css("font-weight", "bold");
+      $(".question").not(".first").css("font-weight", "normal");
+      $(".first-arrow").css("transform", "rotate(180deg)");
+      $(".arrow").not(".first-arrow").css("transform", "rotate(0deg)");
+    });
+
+    $('.second').click(function(){
+      $('.second-answer').slideDown('slow');
+      $(".answer").not(".second-answer").slideUp(1000);
+      $(".second").css("font-weight", "bold");
+      $(".question").not(".second").css("font-weight", "normal");
+      $(".second-arrow").css("transform", "rotate(180deg)");
+      $(".arrow").not(".second-arrow").css("transform", "rotate(0deg)");
+    });
+
+    $('.third').click(function(){
+      $('.third-answer').slideDown('slow');
+      $(".answer").not(".third-answer").slideUp(1000);
+      $(".third").css("font-weight", "bold");
+      $(".question").not(".third").css("font-weight", "normal");
+      $(".third-arrow").css("transform", "rotate(180deg)");
+      $(".arrow").not(".third-arrow").css("transform", "rotate(0deg)");
+    });
+
+    $('.fourth').click(function(){
+      $('.fourth-answer').slideDown('slow');
+      $(".answer").not(".fourth-answer").slideUp(1000);
+      $(".fourth").css("font-weight", "bold");
+      $(".question").not(".fourth").css("font-weight", "normal");
+      $(".fourth-arrow").css("transform", "rotate(180deg)");
+      $(".arrow").not(".fourth-arrow").css("transform", "rotate(0deg)");
+    });
+
+    $('.fifth').click(function(){
+      $('.fifth-answer').slideDown('slow');
+      $(".answer").not(".fifth-answer").slideUp(1000);
+      $(".fifth").css("font-weight", "700");
+      $(".question").not(".fifth").css("font-weight", "normal");
+      $(".fifth-arrow").css("transform", "rotate(180deg)");
+      $(".arrow").not(".fifth-arrow").css("transform", "rotate(0deg)");
+    });
+
+  </script>
+</body>
+</html>
